@@ -1,7 +1,7 @@
 from random import sample
 
 
-def s(list_, target):
+def binary_search(list_, target):
     left, right = 0, len(list_) - 1
     while left <= right:
         middle = (left + right) // 2
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     try:
         target = int(input('Pick a number between 0-100: '))
-        target_index = s(rand_list, target)
+        target_index = binary_search(rand_list, target)
 
         print(f'List: {rand_list}')
         if target_index is not None:
